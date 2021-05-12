@@ -1,0 +1,14 @@
+@media only screen and (max-width: 1200px) {
+  form,
+  .greeting,
+  .legal-container {
+    visibility: hidden;
+  }
+
+  .greeting:after {
+    content: "please view this in full screen mode";
+    margin: auto;
+    font-size: 2em;
+    visibility: visible;
+  }
+}

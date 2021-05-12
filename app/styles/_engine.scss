@@ -1,0 +1,74 @@
+//Engine Formating
+@import "./colors";
+
+.eng .engine {
+  width: 10em;
+  margin-right: 2em;
+  margin-top: 0;
+}
+
+.eng select {
+  margin-right: 2em;
+  border-radius: 15px;
+  font-size: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 10em;
+}
+
+.time {
+  width: 8em;
+}
+
+.time {
+  font-size: 20px;
+  padding-right: 7em;
+}
+
+.eng .engine {
+  border: 5px solid transparent;
+}
+
+.other-dropdown {
+  margin: 1em 0em 1.125em 0.5em;
+}
+
+.hours {
+  margin-right: 2em;
+}
+
+.other {
+  display: none;
+}
+
+.acc {
+  margin-right: 15em;
+}
+
+.eng .req {
+  width: 8em;
+  margin-right: 0em;
+}
+
+.eng .req-label {
+  width: 5em;
+  font-size: 20px;
+  margin-right: 9.5em;
+}
+
+.eng .custom-file-input {
+  font-size: 20px;
+  width: 15em;
+  height: 3em;
+  font-size: 20px;
+  margin: 0em 10em 1.125em 0em;
+}
+
+.eng .trl {
+  margin-top: 0em;
+  margin-left: 0.5em;
+  width: 50em;
+}
+
+.trl-text {
+  text-transform: none;
+}
