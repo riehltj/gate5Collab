@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raytheon Core Development</title>
+  <link
+    href="https://www.rtx.com/-/media/project/united-technologies/shared/images/identity/favicon-rtx-2.png?rev=8c202423538a44f6a9b7c6b85a448a1c"
+    rel="shortcut icon" />
+  <link rel="stylesheet" href="./app/styles/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <a href="#" class="logo"><img src="./img/rtx_logo.svg" alt="raytheon logo" /></a>
+  <div class="greeting">
+    <h1>We just have a few more questions about your company</h1>
+  </div>
+  <form id="theForm" name="theForm" action="#" onkeydown="return event.key != 'Enter';">
+    <h2>General Company Questions:</h2>
+    <section>
+      <div class="question">
+        <h3>Publicly Owned:</h3>
+        <h3>Number of Employees:</h3>
+        <h3>Year Company Founded:</h3>
+        <h3>Current Clients/Programs:</h3>
+      </div>
+      <div class="response">
+        <div class="radio-container">
+          <input class="radio" type="radio" name="public" id="public" value="yes" />
+          <label for="regUS">Yes</label>
+          <input class="radio" type="radio" name="public" id="public" value="no" />
+          <label for="regUS">no</label>
+        </div>
+        <input class="info" type="number" name="employees" id="employees" placeholder="Number of Employees" />
+        <input class="info" type="number" name="yearFounded" id="yearFounded" placeholder="Year Company was Founded" />
+        <textarea class="info text-box" type="text" name="clients" id="clients"
+          placeholder="Current Clients or programs" cols="30" rows="10"></textarea>
+
+
+
+      </div>
+    </section>
+    <div class="button-container">
+      <div class="left">
+        <div class="arrow left-arrow"><a href="#">Value that will be hidden</a></div>
+
+        <div class="prev-button"><a href="#">Previous</a></div>
+      </div>
+      <div class="right ">
+        <button value="Continue" type="submit" for="submit">Continue</button>
+        <input class="right-arrow arrow" type="submit" value="Continue">
+      </div>
+    </div>
+  </form>
+  </div>
+</body>
+<script src="./app/scripts/tableContents.js"></script>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raytheon Core Development</title>
+    <link
+        href="https://www.rtx.com/-/media/project/united-technologies/shared/images/identity/favicon-rtx-2.png?rev=8c202423538a44f6a9b7c6b85a448a1c"
+        rel="shortcut icon" />
+    <link rel="stylesheet" href="./app/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <a href="#" class="logo"><img src="./img/rtx_logo.svg" alt="raytheon logo" /></a>
+    <div class="greeting">
+        <h1>Numbers.. numbers.. numbers..</h1>
+    </div>
+    <form id="theForm" name="theForm" action="#" action="#" onkeydown="return event.key != 'Enter';">
+        <h2>Engine Expected Quote </h2>
+        <section>
+            <div class="question">
+                <h3>Engine Cost Target:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'> Engine cost per unit, estimate if needed.
+                            </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Internal Research and Development:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>IRAD cost needed to further develop technology.</div>
+                        </a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">nonrecurring Engineering:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>One time cost for the engine development, estimate is
+                                acceptable.</div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+
+                <h3>Time from PO to Delivery:*<span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Estimated time it would take from the point of
+                                ordering to delivery.</div>
+                        </a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Monthly Production Capacity:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Expected monthly output on production line.
+                            </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+
+            </div>
+            <div class="response">
+                <div class="eng cost-div">
+                    <label class=".req-label" for="eng-cost">$</label>
+                    <input class="engine" type="number" step=".01" name="eng-cost" id="eng-cost"
+                        placeholder="engine cost" />
+
+                    <input class="check" type="checkbox" name="unknown" id="eng-cost-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng cost-div">
+                    <label class=".req-label" for="irad-cost">$</label>
+                    <input class="engine" type="number" step=".01" name="irad-cost" id="irad-cost"
+                        placeholder="IRAD cost" />
+
+                    <input class="check" type="checkbox" name="unknown" id="irad-cost-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng cost-div">
+                    <label class=".req-label" for="nre-cost">$</label>
+                    <input class="engine" type="number" step=".01" name="nre-cost" id="nre-cost"
+                        placeholder="NRE cost" />
+
+                    <input class="check" type="checkbox" name="unknown" id="nre-cost-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+                <div class="eng cost-div">
+                    <label class=".req-label" for="delivery-time">#</label>
+                    <input class="engine" type="number" name="delivery-time" id="delivery-time"
+                        placeholder="Delivery time" />
+                    <select name="delivery-time-units" id="delivery-time-units">
+                        <option value="" disabled selected>select</option>
+                        <option value="days">days</option>
+                        <option value="weeks">weeks</option>
+                        <option value="months">months</option>
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="delivery-time-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng cost-div">
+                    <label class=".req-label" for="capacity">#</label>
+                    <input class="engine" type="number" name="capacity" id="capacity" placeholder="monthly units" />
+
+                    <input class="check" type="checkbox" name="unknown" id="capacity-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+
+
+            </div>
+        </section>
+        <div class="button-container">
+            <div class="left">
+                <div class="arrow left-arrow"><a href="#">Value that will be hidden</a></div>
+
+                <div class="prev-button"><a href="#">Previous</a></div>
+            </div>
+            <div class="right ">
+                <button value="Continue" type="submit" for="submit">Continue</button>
+                <input class="right-arrow arrow" type="submit" value="Continue">
+            </div>
+        </div>
+    </form>
+</body>
+<script src="./app/scripts/tableContents.js"></script>
+<script src="./app/scripts/other.js"></script>
+<script src="./app/scripts/unknown.js"></script>
+
+
+</html>

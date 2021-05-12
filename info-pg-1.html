@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raytheon Core Development</title>
+  <link
+    href="https://www.rtx.com/-/media/project/united-technologies/shared/images/identity/favicon-rtx-2.png?rev=8c202423538a44f6a9b7c6b85a448a1c"
+    rel="shortcut icon" />
+  <link rel="stylesheet" href="./app/styles/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <a href="#" class="logo"><img src="./img/rtx_logo.svg" alt="raytheon logo" /></a>
+  <div class="greeting">
+    <h1>Hello, Welcome to the Raytheon Core Development Survey</h1>
+  </div>
+  <div class="container">
+    <form id="theForm" name="theForm" action="#" onkeydown="return event.key != 'Enter';">
+      <h2>Company Point of Contact (POC)</h2>
+      <section>
+        <div class="question">
+          <h3>POC Name:*</h3>
+          <h3>POC Phone Number:*</h3>
+          <h3>POC Email:*</h3>
+        </div>
+
+        <div class="response">
+          <input class="info" type="text" name="pocName" id="pocName" placeholder="Point of Contact Name" />
+          <input class="info" type="tel" name="pocTel" id="pocTel" placeholder="Point of Contact Telephone" />
+          <input class="info" type="email" name="pocEmail" id="pocEmail" placeholder="Point of Contact Email" />
+        </div>
+      </section>
+      <h2>Company Point of Contact (POC)</h2>
+      <section>
+        <div class="question">
+          <h3>Headquarters Location:*</h3>
+          <h3>Engineering Location:*</h3>
+          <h3>Manufacturing Location:*</h3>
+          <h3>Registered US company:*</h3>
+        </div>
+        <div class="response">
+          <input class="info" type="text" name="headLoc" id="headLoc" placeholder="City, State/Territory" />
+          <input class="info" type="text" name="engLoc" id="engLoc" placeholder="City, State/Territory" />
+          <input class="info" type="text" name="manLoc" id="manLoc" placeholder="City, State/Territory" />
+          <div class="radio-container">
+            <input class="radio" type="radio" name="regUS" id="regUS" value="yes" />
+            <label for="regUS">Yes</label>
+            <input class="radio" type="radio" name="regUS" id="regUS" value="no" />
+            <label for="regUS">no</label>
+          </div>
+      </section>
+
+
+  </div>
+  </section>
+
+
+
+  <div class="button-container">
+    <div class="left">
+      <div class="arrow left-arrow"><a href="#">Value that will be hidden</a></div>
+
+      <div class="prev-button"><a href="#">Previous</a></div>
+    </div>
+    <div class="right ">
+      <button value="Continue" type="submit" for="submit">Continue</button>
+      <input class="right-arrow arrow" type="submit" value="Continue">
+    </div>
+  </div>
+  </form>
+  </div>
+</body>
+
+<script src="./app/scripts/tableContents.js"></script>
+
+</html>

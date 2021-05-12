@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raytheon Core Development</title>
+    <link
+        href="https://www.rtx.com/-/media/project/united-technologies/shared/images/identity/favicon-rtx-2.png?rev=8c202423538a44f6a9b7c6b85a448a1c"
+        rel="shortcut icon" />
+    <link rel="stylesheet" href="./app/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <a href="#" class="logo"><img src="./img/rtx_logo.svg" alt="raytheon logo" /></a>
+    <div class="greeting">
+        <h1>Now its time for the fun part, money</h1>
+    </div>
+    <form id="theForm" name="theForm" action="#" onkeydown="return event.key != 'Enter';">
+        <h2>Engine EQQ </h2>
+        <section>
+            <div class="question">
+                <h3 class="eqq-header">Economic Order Quantity:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Cost breaks per order quantity.
+                            </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+            </div>
+            <div class="response  cost-response">
+                <div class="cost-container">
+                    <div class="cost-block">
+                        <label for="eqq-1">$</label>
+                        <input class="cost" type="number" id="eqq-1" name="eqq-1" placeholder="Cost Break Per">
+                        <label for="qty-1">QTY</label>
+                        <input class="cost" type="number" id="qty-1" name="qty-1" placeholder="quantity">
+                    </div>
+                </div>
+            </div>
+            <div class="button-block">
+                <button type="button" class="plus">+</button>
+                <button type="button" class="minus">-</button>
+            </div>
+        </section>
+        <div class="button-container">
+            <div class="left">
+                <div class="arrow left-arrow"><a href="#">Value that will be hidden</a></div>
+
+                <div class="prev-button"><a href="#">Previous</a></div>
+            </div>
+            <div class="right ">
+                <button value="Continue" type="submit" for="submit">Continue</button>
+                <input class="right-arrow arrow" type="submit" value="Continue">
+            </div>
+        </div>
+    </form>
+</body>
+<script src="./app/scripts/tableContents.js"></script>
+<script src="./app/scripts/other.js"></script>
+<script src="./app/scripts/unknown.js"></script>
+<script src="./app/scripts/addRemove.js"></script>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raytheon Core Development</title>
+    <link
+        href="https://www.rtx.com/-/media/project/united-technologies/shared/images/identity/favicon-rtx-2.png?rev=8c202423538a44f6a9b7c6b85a448a1c"
+        rel="shortcut icon" />
+    <link rel="stylesheet" href="./app/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <a href="#" class="logo"><img src="./img/rtx_logo.svg" alt="raytheon logo" /></a>
+    <div class="greeting">
+        <h1>Lets talk sparks and vibes</h1>
+    </div>
+    <form id="theForm" name="theForm" action="#" onkeydown="return event.key != 'Enter';">
+        <h2>Generator and Vibration at <span class="make-red">ful RPM</span></h2>
+        <section>
+            <div class="question">
+                <h3>Engine Generator:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Select if the engine has a generator, if unknown
+                                please select "No"</div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Maximum Load:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>The load that the generator outputs in watts.</div>
+                        </a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">RMS Voltage:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>RMS Voltage is the root mean squared voltage of the
+                                generator signal.</div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Generator Output by Phase:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Phase output is the voltage output by each phase of
+                                the generator. </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3>Phase to Phase Delta:*<span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>The delta between generator phases.</div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3>Engine Vibration:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>The engine vibration should be the average vibration
+                                at the current flight condition in red above.</div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+
+
+            </div>
+            <div class="response">
+                <div class="gen">
+                    <div class="radio-container">
+                        <input class="radio yesGen" type="radio" name="generator" id="generator" value="1" />
+                        <label for="generator">Yes</label>
+                        <input class="radio noGen" type="radio" name="generator" id="generator" value="0" />
+                        <label for="generator">no</label>
+                    </div>
+                </div>
+
+                <div class="eng generator">
+                    <input class="engine" type="number" step=".01" name="gen-load-full" id="gen-load-full"
+                        placeholder="max load" />
+                    <label class="time" for="gen-load-full">Watts</label>
+                    <select name="gen-load-veri-full" id="gen-load-veri-full">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="gen-load-unk-full">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng generator">
+                    <input class="engine" type="number" step=".01" name="gen-rms-full" id="gen-rms-full"
+                        placeholder="rMS Voltage" />
+                    <label class="time" for="gen-rms-full">Volts</label>
+                    <select name="gen-rms-veri-full" id="gen-rms-veri-full">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="gen-rms-unk-full">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng generator">
+                    <input class="engine" type="number" step=".01" name="gen-out-full" id="gen-out-full"
+                        placeholder="phase output" />
+                    <label class="time" for="gen-out-full">Volts</label>
+                    <select name="gen-out-veri-full" id="gen-out-veri-full">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="gen-out-unk-full">
+                    <label for="unknown">unknown</label>
+                </div>
+                <div class="eng generator">
+                    <input class="engine" type="number" step=".01" name="gen-phase-full" id="gen-phase-full"
+                        placeholder="phase delta" />
+                    <label class="time" for="gen-phase-full">Volts</label>
+                    <select name="gen-phase-veri-full" id="gen-phase-veri-full">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="gen-phase-unk-full">
+                    <label for="unknown">unknown</label>
+                </div>
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="eng-vibe-full" id="eng-vibe-full"
+                        placeholder="vibration" />
+                    <label class="time" for="eng-vibe-full">Hertz </label>
+                    <select name="eng-vibe-veri-full" id="eng-vibe-veri-full">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="eng-vibe-unk-full">
+                    <label for="unknown">unknown</label>
+                </div>
+
+            </div>
+        </section>
+        <div class="button-container">
+            <div class="left">
+                <div class="arrow left-arrow"><a href="#">Value that will be hidden</a></div>
+
+                <div class="prev-button"><a href="#">Previous</a></div>
+            </div>
+            <div class="right ">
+                <button value="Continue" type="submit" for="submit">Continue</button>
+                <input class="right-arrow arrow" type="submit" value="Continue">
+            </div>
+        </div>
+    </form>
+
+</body>
+<script src="./app/scripts/tableContents.js"></script>
+<script src="./app/scripts/noGen.js"></script>
+
+</html>

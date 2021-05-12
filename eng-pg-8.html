@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raytheon Core Development</title>
+    <link
+        href="https://www.rtx.com/-/media/project/united-technologies/shared/images/identity/favicon-rtx-2.png?rev=8c202423538a44f6a9b7c6b85a448a1c"
+        rel="shortcut icon" />
+    <link rel="stylesheet" href="./app/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <a href="#" class="logo"><img src="./img/rtx_logo.svg" alt="raytheon logo" /></a>
+    <div class="greeting">
+        <h1>What does it look like</h1>
+    </div>
+    <form id="theForm" name="theForm" action="#" onkeydown="return event.key != 'Enter';">
+        <h2>Physical Engine Parameters </h2>
+        <section>
+            <div class="question">
+                <h3>Engine Dry Weight:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>The weight of the engine without fuel and
+                                accessories.
+                            </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Engine Weight with accessories:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>The weight of the engine with accessories.</div>
+                        </a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Engine Length:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Length of engine from inlet to nozzle.</div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+
+                <h3>Engine Maximum Diameter:*<span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>The diameter where the engine is the thickest.</div>
+                        </a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Engine Lubrication:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>What type of lubrication does the engine require.
+                            </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3>Engine Bearing Life:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>The life cycle of the engine bearing in hours.</div>
+                        </a>
+                    </span>
+                    <span class="paren">)</span></h3>
+            </div>
+            <div class="response">
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="dry-weight" id="dry-weight"
+                        placeholder="dry weight" />
+                    <select name="dry-weight-units" id="dry-weight-units">
+                        <option value="" disabled selected>select units</option>
+                        <option value="lbs">Pounds</option>
+                        <option value="kg">Kilograms</option>
+                    </select>
+                    <select name="dry-weight-veri" id="dry-weight-veri">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="dry-weight-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="acc-weight" id="acc-weight"
+                        placeholder="total weight" />
+                    <select name="acc-weight-units" id="acc-weight-units">
+                        <option value="" disabled selected>select units</option>
+                        <option value="lbs">Pounds</option>
+                        <option value="kg">Kilograms</option>
+                    </select>
+                    <select name="acc-weight-veri" id="acc-weight-veri">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="acc-weight-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="eng-len" id="eng-len" placeholder="length" />
+                    <select name="eng-len-units" id="eng-len-units">
+                        <option value="" disabled selected>select units</option>
+                        <option value="in">inches</option>
+                        <option value="cm">centimeters</option>
+                        <option value="ft">feet</option>
+                        <option value="m">meters</option>
+                    </select>
+                    <select name="eng-len-veri" id="eng-len-veri">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="eng-len-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="eng-dia" id="eng-dia" placeholder="diameter" />
+                    <select name="eng-dia-units" id="eng-dia-units">
+                        <option value="" disabled selected>select units</option>
+                        <option value="in">inches</option>
+                        <option value="cm">centimeters</option>
+                    </select>
+                    <select name="eng-dia-veri" id="eng-dia-veri">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="eng-dia-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+                <div class="eng">
+                    <select class="other-dropdown" name="eng-lube" id="eng-lube">
+                        <option value="" disabled selected>select lube</option>
+                        <option value="oil">oil</option>
+                        <option value="grease">grease</option>
+                        <option value="fuel">fuel</option>
+                        <option value="other">other</option>
+                    </select>
+                    <input class="engine other" type="text" name="other-lube" id="other-lube" placeholder="other" />
+                    <input class="check" type="checkbox" name="unknown" id="eng-lube-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="eng-bear-life" id="eng-bear-life"
+                        placeholder="bearing life" />
+                    <label class="time hours" for="eng-bear-life">Hours</label>
+                    <select name="eng-bear-life-veri" id="eng-bear-life-veri">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="eng-bear-life-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+
+            </div>
+        </section>
+        <div class="button-container">
+            <div class="left">
+                <div class="arrow left-arrow"><a href="#">Value that will be hidden</a></div>
+
+                <div class="prev-button"><a href="#">Previous</a></div>
+            </div>
+            <div class="right ">
+                <button value="Continue" type="submit" for="submit">Continue</button>
+                <input class="right-arrow arrow" type="submit" value="Continue">
+            </div>
+        </div>
+    </form>
+</body>
+<script src="./app/scripts/tableContents.js"></script>
+<script src="./app/scripts/unknown.js"></script>
+<script src="./app/scripts/other.js"></script>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raytheon Core Development</title>
+    <link
+        href="https://www.rtx.com/-/media/project/united-technologies/shared/images/identity/favicon-rtx-2.png?rev=8c202423538a44f6a9b7c6b85a448a1c"
+        rel="shortcut icon" />
+    <link rel="stylesheet" href="./app/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <a href="#" class="logo"><img src="./img/rtx_logo.svg" alt="raytheon logo" /></a>
+    <div class="greeting">
+        <h1>Last engine questions, noise and TRL</h1>
+    </div>
+    <form id="theForm" name="theForm" action="#" onkeydown="return event.key != 'Enter';">
+        <h2>Engine TRL and Noise signature </h2>
+        <section>
+            <div class="question">
+                <h3>Engine Noise Signature:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Upload a copy of the engine noise signature in image
+                                format.
+                            </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Technology Readiness Level:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>See NASA's documentation for help classifying
+                                technology.</div>
+                        </a>
+                    </span>
+                    <span class="paren">)</span></h3>
+
+
+            </div>
+            <div class="response">
+
+                <div class="eng">
+                    <input class="engine custom-file-input" type="file" name="eng-noise" id="eng-noise"
+                        accept="image/*" />
+
+                    <input class="check" type="checkbox" name="unknown" id="eng-noise-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng">
+                    <select class="trl" name="eng-trl" id="eng-trl">
+                        <option value="" disabled selected>select TRL</option>
+                        <option class="trl-text" value="trl-1">TRL 1 - Basic principles observed and reported.</option>
+                        <option class="trl-text" value="trl-2">TRL 2 - Technology concept and/or application formulated.
+                        </option>
+                        <option class="trl-text" value="trl-3">TRL 3 - Analytical and experimental critical function
+                            and/or
+                            characteristic proof-of-concept.</option>
+                        <option class="trl-text" value="trl-4">TRL 4 - Component and/or breadboard validation in
+                            laboratory environment.
+                        </option>
+                        <option class="trl-text" value="trl-5">TRL5 -
+                            Componentand/orbreadboardvalidationinrelevantenvironment.</option>
+                        <option class="trl-text" value="trl-6">TRL 6 - System/sub-system model or prototype
+                            demonstration in an
+                            operational environment </option>
+                        <option class="trl-text" value="trl-7">TRL 7 - System prototype demonstration in an operational
+                            environment.
+                        </option>
+                        <option class="trl-text" value="trl-8">TRL 8 - Actual system completed and "flight qualified"
+                            through test and
+                            demonstration. </option>
+                        <option class="trl-text" value="trl-9">TRL 9 - Actual system flight proven through successful
+                            mission operations.
+                        </option>
+
+                    </select>
+                </div>
+
+
+
+
+            </div>
+        </section>
+        <div class="button-container">
+            <div class="left">
+                <div class="arrow left-arrow"><a href="#">Value that will be hidden</a></div>
+
+                <div class="prev-button"><a href="#">Previous</a></div>
+            </div>
+            <div class="right ">
+                <button value="Continue" type="submit" for="submit">Continue</button>
+                <input class="right-arrow arrow" type="submit" value="Continue">
+            </div>
+        </div>
+    </form>
+</body>
+<script src="./app/scripts/tableContents.js"></script>
+<script src="./app/scripts/other.js"></script>
+<script src="./app/scripts/unknown.js"></script>
+
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raytheon Core Development</title>
+    <link
+        href="https://www.rtx.com/-/media/project/united-technologies/shared/images/identity/favicon-rtx-2.png?rev=8c202423538a44f6a9b7c6b85a448a1c"
+        rel="shortcut icon" />
+    <link rel="stylesheet" href="./app/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <a href="#" class="logo"><img src="./img/rtx_logo.svg" alt="raytheon logo" /></a>
+    <div class="greeting">
+        <h1>Where and how fast can you fly?</h1>
+    </div>
+
+    <h2>Enter the Overall Operating Envelope</h2>
+    <div class="chart">
+        <div class="cord-container">
+            <div class="cord-box">
+                <label for="cord">Mach Number:</label>
+                <input class='cord' type="number" name="cord-x1" id="cord-x1" value="0">
+                <label for="cord">Altitude:</label>
+                <input class='cord' type="number" name="cord-y1" id="cord-y1" value="0">
+                <label class='feet' for="cord">ft</label>
+            </div>
+
+            <div class="cord-box">
+                <label for="cord">Mach Number:</label>
+                <input class='cord' type="number" name="cord-x2" id="cord-x2" value=".05">
+                <label for="cord">Altitude:</label>
+                <input class='cord' type="number" name="cord-y2" id="cord-y2" value="10000">
+                <label class='feet' for="cord">ft</label>
+            </div>
+
+            <div class="cord-box">
+                <label for="cord">Mach Number:</label>
+                <input class='cord' type="number" name="cord-x3" id="cord-x3" value=".1">
+                <label for="cord">Altitude:</label>
+                <input class='cord' type="number" name="cord-y3" id="cord-y3" value="10000">
+                <label class='feet' for="cord">ft</label>
+            </div>
+
+            <div class="cord-box">
+                <label for="cord">Mach Number:</label>
+                <input class='cord' type="number" name="cord-x4" id="cord-x4" value=".3">
+                <label for="cord">Altitude:</label>
+                <input class='cord' type="number" name="cord-y4" id="cord-y4" value="25000">
+                <label class='feet' for="cord">ft</label>
+            </div>
+            <div class="cord-box">
+                <label for="cord">Mach Number:</label>
+                <input class='cord' type="number" name="cord-x5" id="cord-x5" value=".4">
+                <label for="cord">Altitude:</label>
+                <input class='cord' type="number" name="cord-y5" id="cord-y5" value="25000">
+                <label class='feet' for="cord">ft</label>
+            </div>
+            <div class="cord-box">
+                <label for="cord">Mach Number:</label>
+                <input class='cord' type="number" name="cord-x6" id="cord-x6" value=".5">
+                <label for="cord">Altitude:</label>
+                <input class='cord' type="number" name="cord-y6" id="cord-y6" value="25000">
+                <label class='feet' for="cord">ft</label>
+            </div>
+            <div class="cord-box">
+                <label for="cord">Mach Number:</label>
+                <input class='cord' type="number" name="cord-x7" id="cord-x7" placeholder="Mach">
+                <label for="cord">Altitude:</label>
+                <input class='cord' type="number" name="cord-y7" id="cord-y7" placeholder="Alt">
+                <label class='feet' for="cord">ft</label>
+            </div>
+            <button class="update-chart">Update</button>
+
+        </div>
+        <canvas id="myChart" width="500" height="500"></canvas>
+    </div>
+
+
+    <form id="theForm" name="theForm" action="#">
+        <div class="button-container">
+            <div class="left">
+                <div class="arrow left-arrow"><a href="#"></a></div>
+
+                <div class="prev-button"><a href="#">Previous</a></div>
+            </div>
+            <div class="right ">
+                <button value="Continue" type="submit" for="submit">Continue</button>
+                <input class="right-arrow arrow" type="submit" value="Continue">
+            </div>
+        </div>
+    </form>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./app/scripts/operatingEnv.js"></script>
+<script src="./app/scripts/tableContents.js"></script>
+
+</html>

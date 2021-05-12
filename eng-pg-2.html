@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raytheon Core Development</title>
+    <link
+        href="https://www.rtx.com/-/media/project/united-technologies/shared/images/identity/favicon-rtx-2.png?rev=8c202423538a44f6a9b7c6b85a448a1c"
+        rel="shortcut icon" />
+    <link rel="stylesheet" href="./app/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <a href="#" class="logo"><img src="./img/rtx_logo.svg" alt="raytheon logo" /></a>
+    <div class="greeting">
+        <h1>now lets learn about the engine at full rpm</h1>
+    </div>
+    <form id="theForm" name="theForm" action="#" onkeydown="return event.key != 'Enter';">
+        <h2>Engine parameters at <span class="make-red">Full RPM</span></h2>
+        <section>
+            <div class="question">
+                <h3>Thrust:*
+                    <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Thrust
+                                is the force needed to overcome the resistance of air (drag) to the passage of an
+                                aircraft. "FN" is the common nomenclature for thrust.</div></a>
+                    </span>
+                    <span class="paren">)</span>
+                </h3>
+                <h3>SFC:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Specific Fuel Consumption (SFC) is "how much fuel the
+                                engine burns each hour."</div></a>
+                    </span>
+                    <span class="paren">)</span>
+                    <h3>EGT:* <span class="paren">(</span>
+                        <span class="tool-tip">
+                            <a class="tool-tip" href="#">help
+                                <div class='tool-tip-text' id='thrust'>Exhaust Gas Temperature (EGT) the temperature at
+                                    the exahust portion of the engine.</div></a>
+                        </span>
+                        <span class="paren">)</span>
+                    </h3>
+                    <h3>Inlet Mass Flow:* <span class="paren">(</span>
+                        <span class="tool-tip">
+                            <a class="tool-tip" href="#">help
+                                <div class='tool-tip-text' id='thrust'>Mass flow of air at the inlet of the compressor
+                                    typically the symbol used is ṁ (mdot)</div></a>
+                        </span>
+                        <span class="paren">)</span>
+                    </h3>
+                    <h3>Thrust Bearing Temperature:* <span class="paren">(</span>
+                        <span class="tool-tip">
+                            <a class="tool-tip" href="#">help
+                                <div class='tool-tip-text' id='thrust'>Thrust bearing temperture is the temperature of
+                                    the bearings while the engine is running.</div></a>
+                        </span>
+                        <span class="paren">)</span>
+                    </h3>
+
+            </div>
+            <div class="response">
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="thrust-full" id="thrust-full"
+                        placeholder="thrust" />
+                    <select name="thrust-units-full" id="thrust-units-full">
+                        <option value="" disabled selected>select units</option>
+                        <option value="newtons">Newtons</option>
+                        <option value="lbs-force">pounds of force</option>
+                    </select>
+                    <select name="thrust-veri-full" id="thrust-veri-full">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="thrust-unk-full">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="sfc" id="sfc-full" placeholder="sfc-full" />
+                    <select name="sfc-units-full" id="sfc-units-full">
+                        <option value="" disabled selected>select units</option>
+                        <option value="std">lbm/hr/lbs</option>
+                        <option value="metric">kg/hr/N</option>
+                    </select>
+                    <select name="sfc-veri-full" id="sfc-veri-full">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="sfc-unk-full">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="egt-full" id="egt-full" placeholder="egt" />
+                    <select name="egt-units-full" id="egt-units-full">
+                        <option value="" disabled selected>select units</option>
+                        <option value="f">Farenheit</option>
+                        <option value="c">Celsius</option>
+                    </select>
+                    <select name="egt-veri-full" id="egt-veri-full">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="egt-unk-full">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="mdot-full" id="mdot-full" placeholder="mdot" />
+                    <select name="mdot-units-full" id="mdot-units-full">
+                        <option value="" disabled selected>select units</option>
+                        <option value="std">lbm/s</option>
+                        <option value="metric">kg/s</option>
+                    </select>
+                    <select name="mdot-veri-full" id="mdot-veri-full">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="mdot-unk-full">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="bearing-temp-full" id="bearing-temp-full"
+                        placeholder="bearing-temp" />
+                    <select name="bearing-temp-units-full" id="bearing-temp-units-full">
+                        <option value="" disabled selected>select units</option>
+                        <option value="f">Farenheit</option>
+                        <option value="c">Celsius</option>
+                    </select>
+                    <select name="bearing-temp-veri-full" id="bearing-temp-veri-full">
+                        <option value="" disabled selected>Verified By</option>
+                        <option value="model">Numerical Model</option>
+                        <option value="test">Test</option>
+
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="bearing-temp-unk-full">
+                    <label for="unknown">unknown</label>
+                </div>
+            </div>
+        </section>
+        <div class="button-container">
+            <div class="left">
+                <div class="arrow left-arrow"><a href="#">Value that will be hidden</a></div>
+
+                <div class="prev-button"><a href="#">Previous</a></div>
+            </div>
+            <div class="right ">
+                <button value="Continue" type="submit" for="submit">Continue</button>
+                <input class="right-arrow arrow" type="submit" value="Continue">
+            </div>
+        </div>
+    </form>
+
+</body>
+<script src="./app/scripts/tableContents.js"></script>
+
+</html>

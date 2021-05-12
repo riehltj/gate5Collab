@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raytheon Core Development</title>
+    <link
+        href="https://www.rtx.com/-/media/project/united-technologies/shared/images/identity/favicon-rtx-2.png?rev=8c202423538a44f6a9b7c6b85a448a1c"
+        rel="shortcut icon" />
+    <link rel="stylesheet" href="./app/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <a href="#" class="logo"><img src="./img/rtx_logo.svg" alt="raytheon logo" /></a>
+    <div class="greeting">
+        <h1>ok now lets discuss requirements</h1>
+    </div>
+    <form id="theForm" name="theForm" action="#" onkeydown="return event.key != 'Enter';">
+        <h2>Engine requirements </h2>
+        <section>
+            <div class="question">
+                <h3>Engine Inlet Airflow Requirements:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>What is the minimum mass flow rate for the engines
+                                design.
+                            </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Engine Starting System Requirements:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>What voltage is on the ground to start the
+                                engine (i.e. Shore Power).</div>
+                        </a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Engine Exhaust Requirements:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Nozzle length and diameter for optimum performance.
+                            </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+
+                <h3>Engine Fuel Requirements:*<span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>What type of oil (if any) and what percentage by
+                                volume.
+                            </div>
+                        </a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Engine Accessory Requirements:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>What voltage is to power accessories on the
+                                ground (i.e. Pyrotechnic starter or heater).
+                            </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Engine Service Life Requirements:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>How many hours of engine operation until maintenance
+                                is needed.
+                            </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+
+            </div>
+            <div class="response">
+
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="mdot-req" id="mdot-req"
+                        placeholder="mdot min" />
+                    <select name="mdot-units-full" id="mdot-units-full">
+                        <option value="" disabled selected>select units</option>
+                        <option value="std">lbm/s</option>
+                        <option value="metric">kg/s</option>
+                    </select>
+                    <input class="check" type="checkbox" name="unknown" id="eng-fuel-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="ss-req-volt" id="ss-req-volt"
+                        placeholder="voltage" />
+                    <label class="req-label" for="ss-req">Volts</label>
+                    <input class="engine" type="number" step=".01" name="ss-req-amp" id="ss-req-amp"
+                        placeholder="Current" />
+                    <label class="req-label" for="gen-rms-idle">Amps</label>
+                    <input class="check" type="checkbox" name="unknown" id="ss-req-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng">
+                    <input class="engine" type="number" step=".01" name="noz-req-len" id="noz-req-len"
+                        placeholder="nozzle len" />
+                    <select name="noz-req-len-units" id="noz-req-len-units">
+                        <option value="" disabled selected>select units</option>
+                        <option value="std">in</option>
+                        <option value="metric">cm</option>
+                    </select>
+                    <input class="engine" type="number" step=".01" name="noz-req-dia" id="noz-req-dia"
+                        placeholder="Nozzle Diam" />
+                    <select name="noz-req-dia-units" id="noz-req-dia-units">
+                        <option value="" disabled selected>select units</option>
+                        <option value="std">in</option>
+                        <option value="metric">cm</option>
+                    </select> <input class="check" type="checkbox" name="unknown" id="noz-req-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng">
+
+                    <input class="engine" type="text" step=".01" name="oil-req" id="oil-req"
+                        placeholder="Type of Oil" />
+                    <input class="engine" type="number" step=".01" name="oil-vol-req" id="oil-vol-req"
+                        placeholder="% by Volume" />
+                    <label class="req-label" for="oil-bol-req">% by Volume</label>
+                    <input class="check" type="checkbox" name="unknown" id="oil-vol-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+                <div class="eng">
+
+                    <input class="engine" type="text" step=".01" name="acc-req-v" id="acc-req-v"
+                        placeholder="Acc Pwr (V)" />
+                    <label class="req-label" for="acc-req-v">Volts </label>
+                    <input class="engine" type="text" step=".01" name="acc-req-a" id="acc-req-a"
+                        placeholder="Acc Pwr (A)" />
+                    <label class="req-label" for="acc-req-c">Amps </label>
+
+
+                    <input class="check" type="checkbox" name="unknown" id="acc-req-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng">
+
+                    <input class="engine" type="text" step=".01" name="life-req" id="life-req"
+                        placeholder="Life in hours" />
+                    <label class="req-label" for="life-req">Hours </label>
+
+
+
+                    <input class="check" type="checkbox" name="unknown" id="life-req-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+
+            </div>
+        </section>
+        <div class="button-container">
+            <div class="left">
+                <div class="arrow left-arrow"><a href="#">Value that will be hidden</a></div>
+
+                <div class="prev-button"><a href="#">Previous</a></div>
+            </div>
+            <div class="right ">
+                <button value="Continue" type="submit" for="submit">Continue</button>
+                <input class="right-arrow arrow" type="submit" value="Continue">
+            </div>
+        </div>
+    </form>
+</body>
+<script src="./app/scripts/tableContents.js"></script>
+<script src="./app/scripts/other.js"></script>
+<script src="./app/scripts/unknown.js"></script>
+
+
+</html>

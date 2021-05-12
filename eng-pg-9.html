@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raytheon Core Development</title>
+    <link
+        href="https://www.rtx.com/-/media/project/united-technologies/shared/images/identity/favicon-rtx-2.png?rev=8c202423538a44f6a9b7c6b85a448a1c"
+        rel="shortcut icon" />
+    <link rel="stylesheet" href="./app/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <a href="#" class="logo"><img src="./img/rtx_logo.svg" alt="raytheon logo" /></a>
+    <div class="greeting">
+        <h1>Let's take a minute to talk about the specifics</h1>
+    </div>
+    <form id="theForm" name="theForm" action="#" onkeydown="return event.key != 'Enter';">
+        <h2>Engine accessories </h2>
+        <section>
+            <div class="question">
+                <h3>Starting System:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>The way the engine ignites the fuel mixture.
+                            </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Electrical:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Electrical connection/requirements.</div>
+                        </a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Fuel:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Type of fuel used in the engine.</div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+
+                <h3>gasses:*<span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>Gas needed for combustion (usually oxygen/air) but in
+                                case specifics are needed.</div>
+                        </a>
+                    </span>
+                    <span class="paren">)</span></h3>
+                <h3 class="generator">Engine Control:* <span class="paren">(</span>
+                    <span class="tool-tip">
+                        <a class="tool-tip" href="#">help
+                            <div class='tool-tip-text' id='thrust'>What type of lubrication does the engine require.
+                            </div></a>
+                    </span>
+                    <span class="paren">)</span></h3>
+
+            </div>
+            <div class="response">
+                <div class="eng acc">
+                    <select class="other-dropdown" name="eng-ss" id="eng-ss">
+                        <option value="" disabled selected>select start type</option>
+                        <option value="spark">Electric Spark</option>
+                        <option value="pyro">Pyrotechnic</option>
+                        <option value="hydraulic">hydraulic</option>
+                        <option value="air">air</option>
+                        <option value="other">other</option>
+                    </select>
+                    <input class="engine other" type="text" name="other-ss" id="other-ss" placeholder="other" />
+                    <input class="check" type="checkbox" name="unknown" id="eng-ss-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng acc">
+                    <select class="other-dropdown" name="eng-elec" id="eng-elec">
+                        <option value="" disabled selected>select Electrical</option>
+                        <option value="batt">Battery</option>
+                        <option value="gen">Generator</option>
+                        <option value="hydraulic">Nuclear</option>
+                        <option value="other">other</option>
+                    </select>
+                    <input class="engine other" type="text" name="other-elec" id="other-elec" placeholder="other" />
+                    <input class="check" type="checkbox" name="unknown" id="eng-elec-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng acc">
+                    <select class="other-dropdown" name="eng-fuel" id="eng-fuel">
+                        <option value="" disabled selected>select fuel</option>
+                        <option value="jetA">JetA</option>
+                        <option value="jetB">JetB</option>
+                        <option value="jp10">JP-10</option>
+                        <option value="jp9">JP-9</option>
+                        <option value="jp8">JP-8</option>
+                        <option value="jp7">JP-7</option>
+                        <option value="other">other</option>
+                    </select>
+                    <input class="engine other" type="text" name="other-elec" id="other-fuel" placeholder="other" />
+
+                    <input class="check" type="checkbox" name="unknown" id="eng-fuel-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng acc">
+                    <select class="other-dropdown" name="eng-gas" id="eng-gas">
+                        <option value="" disabled selected>select gas</option>
+                        <option value="air">air</option>
+                        <option value="other">other</option>
+                    </select>
+                    <input class="engine other" type="text" name="other-eng-gas" id="other-eng-gas"
+                        placeholder="other" />
+                    <input class="check" type="checkbox" name="unknown" id="eng-gas-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+                <div class="eng acc">
+                    <select class="other-dropdown" name="eng-ctrl" id="eng-ctrl">
+                        <option value="" disabled selected>select control</option>
+                        <option value="pwm">PWM</option>
+                        <option value="alt">Altitude</option>
+                        <option value="physical">Physical/Lever</option>
+                        <option value="other">other</option>
+
+                    </select>
+                    <input class="engine other" type="text" name="other-eng-ctrl" id="other-eng-ctrl"
+                        placeholder="other" />
+                    <input class="check" type="checkbox" name="unknown" id="eng-ctrl-unk">
+                    <label for="unknown">unknown</label>
+                </div>
+
+            </div>
+        </section>
+        <div class="button-container">
+            <div class="left">
+                <div class="arrow left-arrow"><a href="#">Value that will be hidden</a></div>
+
+                <div class="prev-button"><a href="#">Previous</a></div>
+            </div>
+            <div class="right ">
+                <button value="Continue" type="submit" for="submit">Continue</button>
+                <input class="right-arrow arrow" type="submit" value="Continue">
+            </div>
+        </div>
+    </form>
+</body>
+<script src="./app/scripts/tableContents.js"></script>
+<script src="./app/scripts/other.js"></script>
+<script src="./app/scripts/unknown.js"></script>
+
+
+</html>
